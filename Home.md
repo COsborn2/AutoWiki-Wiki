@@ -1,4 +1,1 @@
-Welcome to the AutoWiki wiki!
-
-
-Adding something to the Wiki
+Welcome to the AutoWiki wiki! 
