@@ -1,0 +1,15 @@
+script:
+- |-
+  git config user.name "COsborn2"
+  git config user.email "cameron.osborn@intellitect.com"
+  git remote remove origin
+  git remote add origin https://$GITHUB_API_KEY@github.com/COsborn2/AutoWiki.wiki.git > /dev/null 2>&1
+  git remote add upstream https://$GITHUB_API_KEY@github.com/COsborn2/AutoWiki.wiki.git > /dev/null 2>&1
+  git fetch origin
+  git fetch upstream
+  git merge upstream/master --no-edit
+  git push origin HEAD:master > /dev/null 2>&1
+  git push upstream HEAD:master > /dev/null 2>&1
+env:
+  matrix:
+    secure: Coum0ih4WlC9+/aML5Iwrl7mwCl+16Ghgzz2qqvUYQA1EaN4exnLKGwlMz/6BeX4+AMgQFtiRWgisJFOAoPR2pxg3KJDAtRXnbmAGUY8bubdXgOeG/CM/PR7U+SATCRaFBNHJk6xhoXi9crWg+3FKtsbUinCgeC9O3uGepKkzaV/ky4j7MUVy5inyGPgRRYepxMvjwv0U04FDHoW1aWGwsIPpWaHX86s6lYAeQlkg9Rnjn3ZZeRW75ZWwl9JHupKFfSYE6Ji/dm9m1EJ41e+207NqTrT+Tb2wWKfvG/gEBix8y5nRHh750oiH/lrGcpG/1Hgc/S7KVmK56DtVZA3Zs/cRFKJ7mznAG0YeO3kprDA/2vLXkgFnMwZXYKcN1D6tD1917pW6gYq055715vWE/376+3rqGdD9NwFTfzCXpo8F7zke+qvLGdVU2UgDjnNdNeWLla+hKPrkbmItohcLQhVTAAPxs0f7AeqiW6yiulN+cPNSyQpTlTMII0L3/Fj8UURl3K6X/whCY7hULbt7L2E7wsR9AdcKYTHQuKvWWAERDVJQ4Av4bfKODFf0Ak3VDHyzrY2fgsGJVxujI5t7c9s2moGdoye9FQzwvkEQnoPJ8K57Hp8u618i/e7+lxqqTwBTBJQtyz3xTkEuELnCx+JVNny2cLz4XFA7rHGFYU=
